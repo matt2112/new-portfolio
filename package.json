@@ -1,0 +1,31 @@
+{
+  "name": "new-portfolio",
+  "version": "1.0.0",
+  "description": "A completely updated portfolio",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "NODE_ENV=production npm run clean && webpack -p",
+    "start": "webpack-dev-server"
+  },
+  "repository": "https://github.com/matt2112/new-portfolio",
+  "author": "Matt Lewis",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-env": "^1.1.8",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.26.1",
+    "html-webpack-plugin": "^2.26.0",
+    "node-sass": "^4.3.0",
+    "rimraf": "^2.5.4",
+    "sass-loader": "^4.1.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.0-rc.0",
+    "webpack-dev-server": "^2.2.0-rc.0"
+  }
+}
