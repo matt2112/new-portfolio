@@ -2,6 +2,11 @@
     background-color: $dark-grey;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: $navbar-height;
+    z-index: 100;
     
     &__nav-item {
         color: #fff;

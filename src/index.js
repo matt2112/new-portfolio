@@ -4,10 +4,14 @@ import ReactDOM from 'react-dom';
 import './style/style.scss';
 
 import Navbar from './components/navbar';
+import Top from './components/top-section';
 
 const App = () => {
     return (
-        <Navbar />
+        <div className="wrapper">
+            <Navbar />
+            <Top />
+        </div>
     );
 }
 

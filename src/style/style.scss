@@ -1,3 +1,7 @@
 @import './vendor/normalize';
-@import './variables';
-@import './components/navbar';
+
+@import './utils/variables';
+@import './utils/global';
+
+@import './layout/navbar';
+@import './layout/top-section';

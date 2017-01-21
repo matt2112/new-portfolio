@@ -1,0 +1,16 @@
+.top {
+    position: relative;
+    top: $navbar-height;
+    height: calc(100% - #{$navbar-height});
+
+    &__band {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__headline {
+        text-align: center;
+        font-size: 3rem;
+    }
+}
