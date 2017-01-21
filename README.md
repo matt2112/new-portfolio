@@ -5,5 +5,4 @@ I have decided to completely rebuild my portfolio (the old version of which you 
 from the ground up using React, Sass and Webpack. I have also decided not to use Bootstrap this time, now that
 I have a much better grasp of styling and responsive design.
 
-Run ```npm install``` to install dependencies.
-Run ```npm start``` to start webpack dev server, or ```npm run build``` to create production build.
+Run ```npm install``` to install dependencies, ```npm start``` to start webpack dev server, or ```npm run build``` to create production build.

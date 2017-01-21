@@ -1,0 +1,21 @@
+.navbar {
+    background-color: $dark-grey;
+    display: flex;
+    justify-content: space-between;
+    
+    &__nav-item {
+        color: #fff;
+        padding: 0.5rem;
+        font-size: 1.1rem;
+
+        &:hover {
+            background-color: $light-grey;
+            cursor: pointer;
+        }
+    }
+
+    &__right-block {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
