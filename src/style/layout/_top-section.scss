@@ -4,7 +4,8 @@
     height: calc(100% - #{$navbar-height});
 
     &__band {
-        position: relative;
+        position: absolute;
+        width: 100%;
         top: 50%;
         transform: translateY(-50%);
     }
