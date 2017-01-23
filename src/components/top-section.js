@@ -5,7 +5,7 @@ import beach from '../assets/bg/beach.jpeg';
 const Top = () => {
     return (
         <div className="top">
-            <picture>
+            <picture className="top__picture">
                 <source srcSet={beach} media="(min-width: 1380px)" />
                 <source srcSet={beach} media="(min-width: 990px)" />
                 <source srcSet={beach} media="(min-width: 640px)" />

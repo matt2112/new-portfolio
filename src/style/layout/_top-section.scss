@@ -3,6 +3,16 @@
     top: $navbar-height;
     height: calc(100% - #{$navbar-height});
 
+    &__picture {
+        position: fixed;
+        height: 100%;
+        img {
+            height: 100%;
+            width: 100%;            
+            object-fit: cover;
+        }
+    }
+
     &__band {
         position: absolute;
         width: 100%;
