@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './style/style.scss';
+import data from './assets/data/data.json';
 
 import Navbar from './components/navbar';
 import Top from './components/top-section';
@@ -12,7 +13,7 @@ const App = () => {
         <div className="wrapper">
             <Navbar />
             <Top />
-            <Featured />
+            <Featured data={data.featuredProjects} />
         </div>
     );
 }

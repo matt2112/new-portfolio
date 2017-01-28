@@ -1,6 +1,11 @@
 .featured {
     position: relative;
-    height: 500px;
-    background-color: red;
+    background-color: $light-grey;
     top: $navbar-height;
+
+    &__cards {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
 }
