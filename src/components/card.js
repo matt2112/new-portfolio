@@ -1,35 +1,35 @@
 import React from 'react';
 
-// Need to import all images individually so they can be loaded by webpack and mapped onto card components.
-import calc from '../assets/projects/calc.png';
-import camperleaderboard from '../assets/projects/camperleaderboard.png';
-import fifteen from '../assets/projects/fifteen.png';
-import gameoflife from '../assets/projects/gameoflife.png';
-import markdown from '../assets/projects/markdown.png';
-import pomodoro from '../assets/projects/pomodoro.png';
-import quotemachine from '../assets/projects/quotemachine.png';
-import recipebox from '../assets/projects/recipebox.png';
-import ricerocks from '../assets/projects/ricerocks.png';
-import russelltribute from '../assets/projects/russelltribute.png';
-import simon from '../assets/projects/simon.png';
-import tictactoe from '../assets/projects/tictactoe.png';
-import twitch from '../assets/projects/twitch.png';
-import weather from '../assets/projects/weather.png';
-import wikipedia from '../assets/projects/wikipedia.png';
-
-const imgMap = { calc, camperleaderboard, fifteen, gameoflife, markdown, pomodoro,
-    quotemachine, recipebox, ricerocks, russelltribute, simon, 
-    tictactoe, twitch, weather, wikipedia };
-
 const Card = (props) => {
+
+    const image = require(`../assets/projects/${props.img}`);
+
     return (
         <div className="card">
-            <img src={imgMap[props.img]} />
-            <h2>{props.title}</h2>
-            <p>{props.description}</p>
-            <a href={props.repo} target="_blank">View code</a>
+            <a href={props.link} target="_blank">
+                <img className="card__img" src={image} />           
+            </a>
+            <h2 className="card__title">{props.title}</h2>
+            <p className="card__description">{props.description}</p>
+            <a className="card__repo" href={props.repo} target="_blank">View code</a>
         </div>
     );
+};
+
+Card.propTypes = {
+    img: React.PropTypes.string,
+    title: React.PropTypes.string,
+    link: React.PropTypes.string,
+    description: React.PropTypes.string,
+    repo: React.PropTypes.string    
+};
+
+Card.defaultProps = {
+    img: 'calc',
+    title: 'Project Title',
+    link: '',
+    description: 'Project Description',
+    repo: 'https://github.com/matt2112'
 };
 
 export default Card;
