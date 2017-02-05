@@ -18,8 +18,8 @@ import weather from '../assets/projects/weather.png';
 import wikipedia from '../assets/projects/wikipedia.png';
 
 const imgMap = { calc, camperleaderboard, fifteen, gameoflife, markdown, pomodoro,
-                    quotemachine, recipebox, ricerocks, russelltribute, simon, 
-                        tictactoe, twitch, weather, wikipedia };
+    quotemachine, recipebox, ricerocks, russelltribute, simon, 
+    tictactoe, twitch, weather, wikipedia };
 
 const Card = (props) => {
     return (
