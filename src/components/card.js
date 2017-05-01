@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Card = (props) => {
 
@@ -7,7 +8,7 @@ const Card = (props) => {
     return (
         <div className="card">
             <a href={props.link} target="_blank">
-                <img className="card__img" src={image} />           
+                <img className="card__img" src={image} />
             </a>
             <h2 className="card__title">{props.title}</h2>
             <p className="card__description">{props.description}</p>
@@ -17,11 +18,11 @@ const Card = (props) => {
 };
 
 Card.propTypes = {
-    img: React.PropTypes.string,
-    title: React.PropTypes.string,
-    link: React.PropTypes.string,
-    description: React.PropTypes.string,
-    repo: React.PropTypes.string    
+    img: PropTypes.string,
+    title: PropTypes.string,
+    link: PropTypes.string,
+    description: PropTypes.string,
+    repo: PropTypes.string
 };
 
 Card.defaultProps = {
