@@ -31,14 +31,27 @@ module.exports = {
                 test: /\.css$/
             },
             {
-                test: /\.(jpe?g|png|gif|svg)$/,
-                use: [
-                    {
-                        loader: 'url-loader',
-                        options: { limit: 40000 }
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                loaders: ['file-loader', {
+                    loader: 'image-webpack-loader',
+                    query: {
+                        mozjpeg: {
+                            progressive: true,
+                        },
+                        gifsicle: {
+                            interlaced: false,
+                        },
+                        optipng: {
+                            optimizationLevel: 4,
+                        },
+                        pngquant: {
+                            quality: '75-90',
+                            speed: 3,
+                        },
                     },
-                    'image-webpack-loader'
-                ]
+                }],
+                exclude: /node_modules/,
+                include: __dirname,
             }
         ]
     },
